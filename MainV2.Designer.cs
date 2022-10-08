@@ -46,9 +46,9 @@ namespace MissionPlanner
             this.MenuFlightData = new System.Windows.Forms.ToolStripButton();
             this.MenuFlightPlanner = new System.Windows.Forms.ToolStripButton();
             this.MenuInitConfig = new System.Windows.Forms.ToolStripButton();
-            this.MenuConfigTune = new System.Windows.Forms.ToolStripButton();
-            this.MenuSimulation = new System.Windows.Forms.ToolStripButton();
-            this.MenuHelp = new System.Windows.Forms.ToolStripButton();
+           // this.MenuConfigTune = new System.Windows.Forms.ToolStripButton();
+           // this.MenuSimulation = new System.Windows.Forms.ToolStripButton();
+           // this.MenuHelp = new System.Windows.Forms.ToolStripButton();
             this.MenuConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.MenuArduPilot = new System.Windows.Forms.ToolStripButton();
@@ -70,9 +70,9 @@ namespace MissionPlanner
             this.MenuFlightData,
             this.MenuFlightPlanner,
             this.MenuInitConfig,
-            this.MenuConfigTune,
-            this.MenuSimulation,
-            this.MenuHelp,
+            //this.MenuConfigTune,
+           // this.MenuSimulation,
+            //this.MenuHelp,
             this.MenuConnect,
             this.toolStripConnectionControl,
             this.MenuArduPilot});
@@ -150,7 +150,7 @@ namespace MissionPlanner
             this.MenuInitConfig.Click += new System.EventHandler(this.MenuSetup_Click);
             // 
             // MenuConfigTune
-            // 
+           /* // 
             this.MenuConfigTune.ForeColor = System.Drawing.SystemColors.ControlLight;
             resources.ApplyResources(this.MenuConfigTune, "MenuConfigTune");
             this.MenuConfigTune.Margin = new System.Windows.Forms.Padding(0);
@@ -172,7 +172,7 @@ namespace MissionPlanner
             this.MenuHelp.Margin = new System.Windows.Forms.Padding(0);
             this.MenuHelp.Name = "MenuHelp";
             this.MenuHelp.Click += new System.EventHandler(this.MenuHelp_Click);
-            // 
+            // */
             // MenuConnect
             // 
             this.MenuConnect.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -248,8 +248,8 @@ namespace MissionPlanner
         public System.Windows.Forms.ToolStripButton MenuFlightData;
         public System.Windows.Forms.ToolStripButton MenuFlightPlanner;
         public System.Windows.Forms.ToolStripButton MenuInitConfig;
-        public System.Windows.Forms.ToolStripButton MenuSimulation;
-        public System.Windows.Forms.ToolStripButton MenuConfigTune;
+       // public System.Windows.Forms.ToolStripButton MenuSimulation;
+      //  public System.Windows.Forms.ToolStripButton MenuConfigTune;
         public System.Windows.Forms.ToolStripButton MenuConnect;
         private Controls.ToolStripConnectionControl toolStripConnectionControl;
         private Controls.MyButton menu;

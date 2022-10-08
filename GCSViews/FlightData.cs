@@ -2249,7 +2249,7 @@ namespace MissionPlanner.GCSViews
             huddropoutresize = true;
 
             int hudh = hud1.Height;
-            int formh = ((Form) sender).Height - 30;
+            int formh = ((Form) sender).Height;
 
             if (((Form) sender).Height < hudh)
             {
@@ -4488,11 +4488,41 @@ namespace MissionPlanner.GCSViews
             {
                 try
                 {
+                    Form dropout1 = new Form();
+                    dropout1.Text = "Cam Dropout";
+                    dropout1.Size = new Size(hud1.Width, hud1.Height + 20);
+                    dropout1.Tag = hud1.Parent;
+                    SubMainLeft.Panel1.Controls.Remove(hud1);
+                    dropout1.Controls.Add(hud1);
+                    dropout1.Resize += dropout_Resize;
+                    dropout1.FormClosed += dropout_FormClosed;
+                    dropout1.RestoreStartupLocation();
+                    dropout1.Show();
+                    huddropout = true;
                     MainV2.cam = new Capture(Settings.Instance.GetInt32("video_device"), new AMMediaType());
 
-                    MainV2.cam.Start();
+                    MainV2.cam.Start(); 
 
                     MainV2.cam.camimage += new CamImage(cam_camimage);
+                     void but1_Click(object sender1, EventArgs e1)
+                    {
+                        MainV2.cam.camimage += null;
+                        MainV2.cam.Dispose();
+                        MainV2.cam = null;
+                        dropout1.Close();
+
+                    }
+
+                    MyButton but1 = new MyButton
+                    {
+                        Location = new Point(dropout1.Width/2,0),
+                        Text = "Close"
+                    };
+                    but1.Click += but1_Click;
+                   
+                    dropout1.Controls.Add(but1);
+                    ThemeManager.ApplyThemeTo(this);
+                    but1.BringToFront();
                 }
                 catch (Exception ex)
                 {
@@ -4500,6 +4530,8 @@ namespace MissionPlanner.GCSViews
                 }
             }
         }
+
+        
 
         private void stopRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {

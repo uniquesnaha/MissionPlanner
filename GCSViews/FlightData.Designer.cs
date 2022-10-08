@@ -1695,19 +1695,20 @@ namespace MissionPlanner.GCSViews
             this.tabServo.Controls.Add(this.flowLayoutPanelServos);
             resources.ApplyResources(this.tabServo, "tabServo");
             this.tabServo.Name = "tabServo";
+            this.tabServo.Text = "Light/Payload";
             this.tabServo.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanelServos
             // 
             resources.ApplyResources(this.flowLayoutPanelServos, "flowLayoutPanelServos");
-            this.flowLayoutPanelServos.Controls.Add(this.servoOptions1);
+           /* this.flowLayoutPanelServos.Controls.Add(this.servoOptions1);
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions2);
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions3);
-            this.flowLayoutPanelServos.Controls.Add(this.servoOptions4);
+            this.flowLayoutPanelServos.Controls.Add(this.servoOptions4);*/
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions5);
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions6);
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions7);
-            this.flowLayoutPanelServos.Controls.Add(this.servoOptions8);
+            /*this.flowLayoutPanelServos.Controls.Add(this.servoOptions8);
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions9);
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions10);
             this.flowLayoutPanelServos.Controls.Add(this.servoOptions11);
@@ -1717,20 +1718,22 @@ namespace MissionPlanner.GCSViews
             this.flowLayoutPanelServos.Controls.Add(this.relayOptions3);
             this.flowLayoutPanelServos.Controls.Add(this.relayOptions4);
             this.flowLayoutPanelServos.Controls.Add(this.relayOptions5);
-            this.flowLayoutPanelServos.Controls.Add(this.relayOptions6);
+            this.flowLayoutPanelServos.Controls.Add(this.relayOptions6);*/
             this.flowLayoutPanelServos.Name = "flowLayoutPanelServos";
             // 
             // servoOptions1
             // 
-            resources.ApplyResources(this.servoOptions1, "servoOptions1");
+           /* resources.ApplyResources(this.servoOptions1, "servoOptions1");
             this.servoOptions1.Name = "servoOptions1";
             this.servoOptions1.thisservo = 5;
+            
             // 
             // servoOptions2
             // 
             resources.ApplyResources(this.servoOptions2, "servoOptions2");
             this.servoOptions2.Name = "servoOptions2";
             this.servoOptions2.thisservo = 6;
+            this.servoOptions2.TXT_rcchannel.Text = "NAME";
             // 
             // servoOptions3
             // 
@@ -1742,91 +1745,120 @@ namespace MissionPlanner.GCSViews
             // 
             resources.ApplyResources(this.servoOptions4, "servoOptions4");
             this.servoOptions4.Name = "servoOptions4";
-            this.servoOptions4.thisservo = 8;
+            this.servoOptions4.thisservo = 8;*/
             // 
             // servoOptions5
             // 
             resources.ApplyResources(this.servoOptions5, "servoOptions5");
             this.servoOptions5.Name = "servoOptions5";
             this.servoOptions5.thisservo = 9;
+            this.servoOptions5.TXT_rcchannel.Text = "Light";
+            this.servoOptions5.BUT_Low.Dispose();
+            this.servoOptions5.but_mid.Dispose();
+            this.servoOptions5.BUT_High.Location = new System.Drawing.Point(0, 1);
+            this.servoOptions5.BUT_High.Size = new System.Drawing.Size(73, 21);
+            this.servoOptions5.BUT_High.Text = "Intensity";
+            this.servoOptions5.BUT_Repeat.Location = new System.Drawing.Point(77, 1);
+            this.servoOptions5.BUT_Repeat.Size = new System.Drawing.Size(73, 21);
+            this.servoOptions5.BUT_Repeat.Text = "ON/OFF";
+
+
             // 
             // servoOptions6
             // 
             resources.ApplyResources(this.servoOptions6, "servoOptions6");
             this.servoOptions6.Name = "servoOptions6";
             this.servoOptions6.thisservo = 10;
+            this.servoOptions6.TXT_rcchannel.Text = "Payload";
+            this.servoOptions6.but_mid.Dispose();
+            this.servoOptions6.BUT_Repeat.Dispose();
+            this.servoOptions6.BUT_Low.Location = new System.Drawing.Point(0, 1);
+            this.servoOptions6.BUT_Low.Size = new System.Drawing.Size(73, 21);
+            this.servoOptions6.BUT_Low.Text = "Open";
+            this.servoOptions6.BUT_High.Location = new System.Drawing.Point(77, 1);
+            this.servoOptions6.BUT_High.Size = new System.Drawing.Size(73, 21);
+            this.servoOptions6.BUT_High.Text = "Close";
             // 
             // servoOptions7
             // 
             resources.ApplyResources(this.servoOptions7, "servoOptions7");
             this.servoOptions7.Name = "servoOptions7";
             this.servoOptions7.thisservo = 11;
+            this.servoOptions7.TXT_rcchannel.Text = "Payload";
+            this.servoOptions7.but_mid.Dispose();
+            this.servoOptions7.BUT_Repeat.Dispose();
+            this.servoOptions7.BUT_Low.Location = new System.Drawing.Point(0, 1);
+            this.servoOptions7.BUT_Low.Size = new System.Drawing.Size(73, 21);
+            this.servoOptions7.BUT_Low.Text = "Open";
+            this.servoOptions7.BUT_High.Location = new System.Drawing.Point(77, 1);
+            this.servoOptions7.BUT_High.Size = new System.Drawing.Size(73, 21);
+            this.servoOptions7.BUT_High.Text = "Close";
             // 
             // servoOptions8
             // 
-            resources.ApplyResources(this.servoOptions8, "servoOptions8");
-            this.servoOptions8.Name = "servoOptions8";
-            this.servoOptions8.thisservo = 12;
-            // 
-            // servoOptions9
-            // 
-            resources.ApplyResources(this.servoOptions9, "servoOptions9");
-            this.servoOptions9.Name = "servoOptions9";
-            this.servoOptions9.thisservo = 13;
-            // 
-            // servoOptions10
-            // 
-            resources.ApplyResources(this.servoOptions10, "servoOptions10");
-            this.servoOptions10.Name = "servoOptions10";
-            this.servoOptions10.thisservo = 14;
-            // 
-            // servoOptions11
-            // 
-            resources.ApplyResources(this.servoOptions11, "servoOptions11");
-            this.servoOptions11.Name = "servoOptions11";
-            this.servoOptions11.thisservo = 15;
-            // 
-            // servoOptions12
-            // 
-            resources.ApplyResources(this.servoOptions12, "servoOptions12");
-            this.servoOptions12.Name = "servoOptions12";
-            this.servoOptions12.thisservo = 16;
-            // 
-            // relayOptions1
-            // 
-            resources.ApplyResources(this.relayOptions1, "relayOptions1");
-            this.relayOptions1.Name = "relayOptions1";
-            this.relayOptions1.thisrelay = 0;
-            // 
-            // relayOptions2
-            // 
-            resources.ApplyResources(this.relayOptions2, "relayOptions2");
-            this.relayOptions2.Name = "relayOptions2";
-            this.relayOptions2.thisrelay = 1;
-            // 
-            // relayOptions3
-            // 
-            resources.ApplyResources(this.relayOptions3, "relayOptions3");
-            this.relayOptions3.Name = "relayOptions3";
-            this.relayOptions3.thisrelay = 2;
-            // 
-            // relayOptions4
-            // 
-            resources.ApplyResources(this.relayOptions4, "relayOptions4");
-            this.relayOptions4.Name = "relayOptions4";
-            this.relayOptions4.thisrelay = 3;
-            // 
-            // relayOptions5
-            // 
-            resources.ApplyResources(this.relayOptions5, "relayOptions5");
-            this.relayOptions5.Name = "relayOptions5";
-            this.relayOptions5.thisrelay = 4;
-            // 
-            // relayOptions6
-            // 
-            resources.ApplyResources(this.relayOptions6, "relayOptions6");
-            this.relayOptions6.Name = "relayOptions6";
-            this.relayOptions6.thisrelay = 5;
+            /*  resources.ApplyResources(this.servoOptions8, "servoOptions8");
+              this.servoOptions8.Name = "servoOptions8";
+              this.servoOptions8.thisservo = 12;
+              // 
+              // servoOptions9
+              // 
+              resources.ApplyResources(this.servoOptions9, "servoOptions9");
+              this.servoOptions9.Name = "servoOptions9";
+              this.servoOptions9.thisservo = 13;
+              // 
+              // servoOptions10
+              // 
+              resources.ApplyResources(this.servoOptions10, "servoOptions10");
+              this.servoOptions10.Name = "servoOptions10";
+              this.servoOptions10.thisservo = 14;
+              // 
+              // servoOptions11
+              // 
+              resources.ApplyResources(this.servoOptions11, "servoOptions11");
+              this.servoOptions11.Name = "servoOptions11";
+              this.servoOptions11.thisservo = 15;
+              // 
+              // servoOptions12
+              // 
+              resources.ApplyResources(this.servoOptions12, "servoOptions12");
+              this.servoOptions12.Name = "servoOptions12";
+              this.servoOptions12.thisservo = 16;
+              // 
+              // relayOptions1
+              // 
+              resources.ApplyResources(this.relayOptions1, "relayOptions1");
+              this.relayOptions1.Name = "relayOptions1";
+              this.relayOptions1.thisrelay = 0;
+              // 
+              // relayOptions2
+              // 
+              resources.ApplyResources(this.relayOptions2, "relayOptions2");
+              this.relayOptions2.Name = "relayOptions2";
+              this.relayOptions2.thisrelay = 1;
+              // 
+              // relayOptions3
+              // 
+              resources.ApplyResources(this.relayOptions3, "relayOptions3");
+              this.relayOptions3.Name = "relayOptions3";
+              this.relayOptions3.thisrelay = 2;
+              // 
+              // relayOptions4
+              // 
+              resources.ApplyResources(this.relayOptions4, "relayOptions4");
+              this.relayOptions4.Name = "relayOptions4";
+              this.relayOptions4.thisrelay = 3;
+              // 
+              // relayOptions5
+              // 
+              resources.ApplyResources(this.relayOptions5, "relayOptions5");
+              this.relayOptions5.Name = "relayOptions5";
+              this.relayOptions5.thisrelay = 4;
+              // 
+              // relayOptions6
+              // 
+              resources.ApplyResources(this.relayOptions6, "relayOptions6");
+              this.relayOptions6.Name = "relayOptions6";
+              this.relayOptions6.thisrelay = 5;*/
             // 
             // tabScripts
             // 

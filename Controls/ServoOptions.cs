@@ -8,8 +8,7 @@ namespace MissionPlanner.Controls
     public partial class ServoOptions : UserControl
     {
         // start at 5 increment each instance
-        static int servo = 5;
-
+        static int servo = 9;
         public int thisservo { get; set; }
 
         public ServoOptions()
@@ -17,8 +16,6 @@ namespace MissionPlanner.Controls
             InitializeComponent();
 
             thisservo = servo;
-
-            TXT_rcchannel.Text = thisservo.ToString();
 
             loadSettings();
 

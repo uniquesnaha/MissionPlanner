@@ -62,6 +62,7 @@ namespace MissionPlanner
         public static Image IconFile = null;
 
         public static Splash Splash;
+       // public static login login;
 
         internal static Thread Thread;
 
@@ -199,7 +200,7 @@ namespace MissionPlanner
                 return;
             }
 
-            name = "Mission Planner";
+            name = "Wesee Lab";
 
             try
             {
@@ -274,7 +275,10 @@ namespace MissionPlanner
                 ? File.ReadAllText("version.txt")
                 : System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             Splash.Text = name + " " + Application.ProductVersion + " build " + strVersion;
+
+
             Console.WriteLine("Splash.Show()");
+           
             Splash.Show();
 
             Console.WriteLine("Debugger.IsAttached " + Debugger.IsAttached);

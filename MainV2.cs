@@ -54,10 +54,10 @@ namespace MissionPlanner
             public abstract Image fd { get; }
             public abstract Image fp { get; }
             public abstract Image initsetup { get; }
-            public abstract Image config_tuning { get; }
-            public abstract Image sim { get; }
+            //public abstract Image config_tuning { get; }
+           // public abstract Image sim { get; }
             public abstract Image terminal { get; }
-            public abstract Image help { get; }
+           // public abstract Image help { get; }
             public abstract Image donate { get; }
             public abstract Image connect { get; }
             public abstract Image disconnect { get; }
@@ -101,7 +101,7 @@ namespace MissionPlanner
                 }
             }
 
-            public override Image config_tuning
+            /*public override Image config_tuning
             {
                 get
                 {
@@ -121,7 +121,7 @@ namespace MissionPlanner
                     else
                         return global::MissionPlanner.Properties.Resources.light_simulation_icon;
                 }
-            }
+            }*/
 
             public override Image terminal
             {
@@ -134,7 +134,7 @@ namespace MissionPlanner
                 }
             }
 
-            public override Image help
+           /* public override Image help
             {
                 get
                 {
@@ -144,6 +144,7 @@ namespace MissionPlanner
                         return global::MissionPlanner.Properties.Resources.light_help_icon;
                 }
             }
+            */
 
             public override Image donate
             {
@@ -238,7 +239,7 @@ namespace MissionPlanner
                 }
             }
 
-            public override Image config_tuning
+           /* public override Image config_tuning
             {
                 get
                 {
@@ -258,7 +259,7 @@ namespace MissionPlanner
                     else
                         return global::MissionPlanner.Properties.Resources.dark_simulation_icon;
                 }
-            }
+            }*/
 
             public override Image terminal
             {
@@ -271,7 +272,7 @@ namespace MissionPlanner
                 }
             }
 
-            public override Image help
+           /* public override Image help
             {
                 get
                 {
@@ -280,7 +281,7 @@ namespace MissionPlanner
                     else
                         return global::MissionPlanner.Properties.Resources.dark_help_icon;
                 }
-            }
+            }*/
 
             public override Image donate
             {
@@ -562,8 +563,8 @@ namespace MissionPlanner
 
         public void updateLayout(object sender, EventArgs e)
         {
-            MenuSimulation.Visible = DisplayConfiguration.displaySimulation;
-            MenuHelp.Visible = DisplayConfiguration.displayHelp;
+            //MenuSimulation.Visible = DisplayConfiguration.displaySimulation;
+            //MenuHelp.Visible = DisplayConfiguration.displayHelp;
             MissionPlanner.Controls.BackstageView.BackstageView.Advanced = DisplayConfiguration.isAdvancedMode;
 
             // force autohide on
@@ -1255,19 +1256,19 @@ namespace MissionPlanner
             MenuFlightData.Image = displayicons.fd;
             MenuFlightPlanner.Image = displayicons.fp;
             MenuInitConfig.Image = displayicons.initsetup;
-            MenuSimulation.Image = displayicons.sim;
-            MenuConfigTune.Image = displayicons.config_tuning;
+          //  MenuSimulation.Image = displayicons.sim;
+            //MenuConfigTune.Image = displayicons.config_tuning;
             MenuConnect.Image = displayicons.connect;
-            MenuHelp.Image = displayicons.help;
+           // MenuHelp.Image = displayicons.help;
 
 
             MenuFlightData.ForeColor = ThemeManager.TextColor;
             MenuFlightPlanner.ForeColor = ThemeManager.TextColor;
             MenuInitConfig.ForeColor = ThemeManager.TextColor;
-            MenuSimulation.ForeColor = ThemeManager.TextColor;
-            MenuConfigTune.ForeColor = ThemeManager.TextColor;
+           // MenuSimulation.ForeColor = ThemeManager.TextColor;
+           // MenuConfigTune.ForeColor = ThemeManager.TextColor;
             MenuConnect.ForeColor = ThemeManager.TextColor;
-            MenuHelp.ForeColor = ThemeManager.TextColor;
+            //MenuHelp.ForeColor = ThemeManager.TextColor;
         }
 
         void adsb_UpdatePlanePosition(object sender, MissionPlanner.Utilities.adsb.PointLatLngAltHdg adsb)
@@ -1438,14 +1439,14 @@ namespace MissionPlanner
 
         private void MenuSimulation_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("Simulation");
+           // MyView.ShowScreen("Simulation");
         }
 
         private void MenuTuning_Click(object sender, EventArgs e)
         {
             if (Settings.Instance.GetBoolean("password_protect") == false)
             {
-                MyView.ShowScreen("SWConfig");
+                //MyView.ShowScreen("SWConfig");
             }
             else
             {
@@ -1463,7 +1464,7 @@ namespace MissionPlanner
 
                 if (Password.VerifyPassword(pw))
                 {
-                    MyView.ShowScreen("SWConfig");
+                    //MyView.ShowScreen("SWConfig");
                 }
             }
         }
@@ -3166,9 +3167,9 @@ namespace MissionPlanner
             MyView.AddScreen(new MainSwitcher.Screen("FlightData", FlightData, true));
             MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", FlightPlanner, true));
             MyView.AddScreen(new MainSwitcher.Screen("HWConfig", typeof(GCSViews.InitialSetup), false));
-            MyView.AddScreen(new MainSwitcher.Screen("SWConfig", typeof(GCSViews.SoftwareConfig), false));
-            MyView.AddScreen(new MainSwitcher.Screen("Simulation", Simulation, true));
-            MyView.AddScreen(new MainSwitcher.Screen("Help", typeof(GCSViews.Help), false));
+            //MyView.AddScreen(new MainSwitcher.Screen("SWConfig", typeof(GCSViews.SoftwareConfig), false));
+          //  MyView.AddScreen(new MainSwitcher.Screen("Simulation", Simulation, true));
+           // MyView.AddScreen(new MainSwitcher.Screen("Help", typeof(GCSViews.Help), false));
 
             try
             {
@@ -4043,7 +4044,7 @@ namespace MissionPlanner
 
         private void MenuHelp_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("Help");
+          //  MyView.ShowScreen("Help");
         }
 
 

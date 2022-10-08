@@ -52,6 +52,7 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.renameToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -124,14 +125,14 @@
 
         #endregion
 
-        private MyButton BUT_Low;
-        private MyButton BUT_High;
+        public MyButton BUT_Low;
+        public MyButton BUT_High;
         private System.Windows.Forms.TextBox TXT_pwm_low;
         private System.Windows.Forms.TextBox TXT_pwm_high;
-        private MyButton BUT_Repeat;
-        private System.Windows.Forms.Label TXT_rcchannel;
+        public MyButton BUT_Repeat;
+        public System.Windows.Forms.Label TXT_rcchannel;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem renameToolStripMenuItem;
-        private MyButton but_mid;
+        public MyButton but_mid;
     }
 }
